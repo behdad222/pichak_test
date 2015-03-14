@@ -1,7 +1,7 @@
 package co.pichak.pichak_test;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -9,7 +9,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 
 import co.pichak.pichak_test.View.CustomView.CircleTextView;
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
     private Button start;
     private Button stop;
     private CircleTextView counter;
