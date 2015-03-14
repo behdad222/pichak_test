@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.pixplicity.easyprefs.library.Prefs;
 
+import co.pichak.pichak_test.Adapter.NotificationAdapter;
 import co.pichak.pichak_test.View.CustomView.CircleTextView;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -19,11 +20,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private final String COUNT = "count";
     private final String STARTSTATUS = "startStatus";
 
+    NotificationAdapter notificationAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Prefs.initPrefs(this);
+        notificationAdapter = new NotificationAdapter (0, this);
 
         setContentView(R.layout.activity_main);
         start = (Button) findViewById(R.id.start);
@@ -70,6 +73,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Prefs.putInt(COUNT, count);
         Prefs.putBoolean(STARTSTATUS, startStatus);
         counter.setText(String.valueOf(count));
+        notificationAdapter.startNotification(0);
     }
 
     private void stop() {
@@ -80,5 +84,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Prefs.putInt(COUNT, count);
         Prefs.putBoolean(STARTSTATUS, startStatus);
         counter.setText(String.valueOf(count));
+        notificationAdapter.stopNotification(0);
     }
 }
