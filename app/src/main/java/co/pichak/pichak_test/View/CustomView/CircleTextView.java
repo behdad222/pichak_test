@@ -38,6 +38,6 @@ public class CircleTextView extends TextView {
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(3.5f);
         paint.setAntiAlias(true);
-        canvas.drawCircle(rect.centerX(), rect.centerY(), 200, paint); //FIXME
+        canvas.drawCircle(rect.centerX(), rect.centerY(), 150, paint); //FIXME
     }
 }
