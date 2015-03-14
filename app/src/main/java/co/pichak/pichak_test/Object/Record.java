@@ -1,30 +1,18 @@
-package co.pichak.pichak_test.Adapter.Object;
+package co.pichak.pichak_test.Object;
 
 import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.RealmClass;
 
 @RealmClass
 public class Record extends RealmObject {
-
-    @PrimaryKey
-    private int id;
-    private String count;
+    private int count;
     private String time;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(String count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
